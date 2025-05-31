@@ -34,6 +34,9 @@ private:
 	Color **mainArea;
 
 	blockInfo Tblock;
+	blockInfo Lblock;
+	blockInfo Sblock;
+
 	Color colors[2]; 
 
 public:

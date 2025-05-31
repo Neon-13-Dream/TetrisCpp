@@ -22,6 +22,18 @@ tetriscpp::tetriscpp( int width, int height ) : mainAreaWidth( width ), mainArea
 	TblockPos[2] = { 1, 1 };
 	TblockPos[3] = { 2, 1 };
 	Tblock.createBlock( 4, TblockPos, RED );
+	
+	TblockPos[0] = { 0, 0 };
+	TblockPos[1] = { 0, 1 };
+	TblockPos[2] = { 1, 1 };
+	TblockPos[3] = { 2, 1 };
+	Lblock.createBlock( 4, TblockPos, YELLOW );
+	
+	TblockPos[0] = { 2, 0 };
+	TblockPos[1] = { 1, 0 };
+	TblockPos[2] = { 1, 1 };
+	TblockPos[3] = { 2, 1 };
+	Sblock.createBlock( 4, TblockPos, GREEN );
 }
 
 tetriscpp::~tetriscpp(){
@@ -32,10 +44,10 @@ tetriscpp::~tetriscpp(){
 }
 
 void tetriscpp::update(){
-	if( IsKeyPressed( KEY_LEFT ) ) Tblock.blockMove( -1, 0 );
-	if( IsKeyPressed( KEY_RIGHT ) ) Tblock.blockMove( 1, 0 );
-	if( IsKeyPressed( KEY_UP ) ) Tblock.blockMove( 0, -1 );
-	if( IsKeyPressed( KEY_DOWN ) ) Tblock.blockMove( 0, 1 );
+	if( IsKeyPressed( KEY_LEFT ) ) Lblock.blockMove( -1, 0 );
+	if( IsKeyPressed( KEY_RIGHT ) ) Lblock.blockMove( 1, 0 );
+	if( IsKeyPressed( KEY_UP ) ) Lblock.blockMove( 0, -1 );
+	if( IsKeyPressed( KEY_DOWN ) ) Lblock.blockMove( 0, 1 );
 }
 
 void tetriscpp::SetPixelSize( int size ){
@@ -65,5 +77,5 @@ void tetriscpp::drawMainArea(){
 		}
 	}
 
-	Tblock.drawBlock( mainAreaPos, mainAreaPixelSize, mainAreaPixelSize );
+	Lblock.drawBlock( mainAreaPos, mainAreaPixelSize, mainAreaPixelSize );
 }
