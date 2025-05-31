@@ -12,14 +12,16 @@ private:
 	const int mainAreaWidth;
 	const int mainAreaHeight;
 
-
+	Color colors[2]; 
 
 
 
 
 public:
 	tetriscpp( int, int );
-
+	void drawMainArea();
+	void SetPixelSize( int );
+	void SetPosition( Vector2 );
 
 
 };
