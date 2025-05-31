@@ -10,6 +10,7 @@ int main(){
 
 	while( !WindowShouldClose() ){
 		ClearBackground( { 44, 31, 41, 255 } );
+		test.update();
 
 		BeginDrawing();
 		test.drawMainArea();
